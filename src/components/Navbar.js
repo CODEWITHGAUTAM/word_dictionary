@@ -4,49 +4,15 @@ import About from "./About";
 
 
 export default function Navbar(props) {
-  const [myStyle,setmyStyle]=useState({
-    color:'black',
-    backgroundColor:'white'
-
-  })
-  const [btnText,setbtnText]=useState("Enable dark mode");
-  const ToggleMode=()=>
-  {
-    if(myStyle.color==='black')
-    {
-      setmyStyle(
-        {
-          color:'white',
-          backgroundColor:'black'
-
-        }
-        
-      )
-      setbtnText("Enable White Mode");
-      
-
-    }
-    else{
-      setmyStyle(
-        {
-          color:'black',
-          backgroundColor:'white'
-
-        }
-      )
-      setbtnText("Enable White Mode");
-
-
-    }
-  }
+  
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid" style={myStyle}>
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+      <div className="container-fluid" >
         <a className="navbar-brand" href="/">
           {props.title}
         </a>
         <button
-          className="navbar-toggler" style={myStyle}
+          className="navbar-toggler" 
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -70,9 +36,9 @@ export default function Navbar(props) {
             </li>
           </ul>
           <form className="d-flex">
-          <div className="form-check form-switch">
-         <input className="form-check-input" onClick={ToggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{btnText}</label>
+          <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+         <input className="form-check-input " onClick={props.togglemode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable dark mode</label>
          </div>
            
           </form>

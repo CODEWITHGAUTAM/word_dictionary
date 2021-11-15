@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 export default function Form(props) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
+ 
+
   const ToUppercase = () => {
     //console.log("uppercase was clicked");
     let newText = text.toUpperCase();
@@ -26,6 +28,7 @@ export default function Form(props) {
     var text5 = document.getElementById("exampleFormControlTextarea1");
     text5.select();
     navigator.clipboard.writeText(text5.value);
+    
   };
   const handleOnchange = (event) => {
     setText(event.target.value);
@@ -33,16 +36,9 @@ export default function Form(props) {
 
   return (
     <>
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Text Copied!!</strong> 
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div className="container my-3">
+    
+     
+      <div className="container my-3" style={{color: props.mode==='dark'?'white':'black'}}>
         <h1>{props.heading}</h1>
       </div>
       <div className="container">
@@ -55,6 +51,7 @@ export default function Form(props) {
             className="form-control"
             id="exampleFormControlTextarea1"
             rows="8"
+            style={{backgroundColor:props.mode==='dark'?'#020926':'white',color:props.mode==='dark'?'white':'black'}}
             value={text}
             onChange={handleOnchange}
           ></textarea>
@@ -95,7 +92,7 @@ export default function Form(props) {
           </button>
         </div>
       </div>
-      <div className="container my-2">
+      <div className="container my-2"style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Your Text Summary</h2>
         <p>
           {
@@ -113,7 +110,7 @@ export default function Form(props) {
           Minutes Read
         </p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0?text:"Enter Something in the textbox above to preview it here!"}</p>
       </div>
     </>
   );
