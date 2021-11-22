@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/word_dictionary/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/word_dictionary/static/js/main.889155a3.chunk.js",
+    "main.js.map": "/word_dictionary/static/js/main.889155a3.chunk.js.map",
+    "runtime-main.js": "/word_dictionary/static/js/runtime-main.4afde00b.js",
+    "runtime-main.js.map": "/word_dictionary/static/js/runtime-main.4afde00b.js.map",
+    "static/js/2.d2a3afb8.chunk.js": "/word_dictionary/static/js/2.d2a3afb8.chunk.js",
+    "static/js/2.d2a3afb8.chunk.js.map": "/word_dictionary/static/js/2.d2a3afb8.chunk.js.map",
+    "static/js/3.451b4fe3.chunk.js": "/word_dictionary/static/js/3.451b4fe3.chunk.js",
+    "static/js/3.451b4fe3.chunk.js.map": "/word_dictionary/static/js/3.451b4fe3.chunk.js.map",
+    "index.html": "/word_dictionary/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/word_dictionary/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.d2a3afb8.chunk.js.LICENSE.txt": "/word_dictionary/static/js/2.d2a3afb8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4afde00b.js",
+    "static/js/2.d2a3afb8.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.889155a3.chunk.js"
+  ]
+}
